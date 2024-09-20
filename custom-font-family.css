@@ -1,0 +1,35 @@
+@font-face{
+	font-family: 'Clash Display';
+	src: local url('custom-fonts/clash-display/ClashDisplayExtralight.otf') format('opentype');
+	font-weight: 0;
+}
+
+@font-face{
+	font-family: 'Clash Display';
+	src: local url('custom-fonts/clash-display/ClashDisplayLight.otf') format('opentype');
+	font-weight: 100;
+}
+
+@font-face{
+	font-family: 'Clash Display';
+	src: local url('custom-fonts/clash-display/ClashDisplayRegular.otf') format('opentype');
+	font-weight: 200;
+}
+
+@font-face{
+	font-family: 'Clash Display';
+	src: local url('custom-fonts/clash-display/ClashDisplayMedium.otf') format('opentype');
+	font-weight: 300;
+}
+
+@font-face{
+	font-family: 'Clash Display';
+	src: local url('custom-fonts/clash-display/ClashDisplaySemibold.otf') format('opentype');
+	font-weight: 400;
+}
+
+@font-face{
+	font-family: 'Clash Display';
+	src: local url('custom-fonts/clash-display/ClashDisplayBold.otf') format('opentype');
+	font-weight: 500;
+}

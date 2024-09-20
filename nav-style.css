@@ -1,0 +1,37 @@
+#nav-options{
+	font-size: 0.9em;
+
+	inline-size: 100vw;
+	min-block-size: 80px;
+	background: transparent;
+
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	justify-content: center;
+	justify-items: center;
+	align-content: center;
+	align-items: center;
+
+	position: fixed;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+}
+
+#nav-options .nav-option a{
+	display: block;
+
+	text-transform: uppercase;
+	padding: 4px 15px;
+
+	border: 2px none white;
+	border-radius: 4px;
+
+	transition: border-style ease-out 500ms;
+}
+
+#nav-options .nav-option a:hover{
+	border-style: solid;
+
+	transition: border-style ease-in 500ms;
+}
