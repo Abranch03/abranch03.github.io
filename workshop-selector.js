@@ -23,6 +23,14 @@ function changeCurrentSelectionBg(newBg){
 	body.style.backgroundImage = `url('bg/workshop_${newBg}_bg.jpg')`;
 }
 
+function changeWorkshopTitleLineColor(newColor){
+	const workshopTitleLines = document.querySelectorAll('#workshop-title .line');
+
+	for (let i=0; i<workshopTitleLines.length; i++){
+		workshopTitleLines[i].style.setProperty('background-color', `var(--${newColor}-color)`);
+	}
+}
+
 function selectPrevious(collection){
 	let currentSelection = findCurrentSelection(collection);
 	let previousSelection;
@@ -36,6 +44,7 @@ function selectPrevious(collection){
 
 	changeCurrentSelectionBg(collection[previousSelection].name);
 	changeCurrentSelectionName(collection[previousSelection].name);
+	changeWorkshopTitleLineColor(collection[previousSelection].name);
 	changeCurrentSelection(collection, previousSelection);
 }
 
@@ -52,6 +61,7 @@ function selectNext(collection){
 
 	changeCurrentSelectionBg(collection[nextSelection].name);
 	changeCurrentSelectionName(collection[nextSelection].name);
+	changeWorkshopTitleLineColor(collection[nextSelection].name);
 	changeCurrentSelection(collection, nextSelection);
 }
 

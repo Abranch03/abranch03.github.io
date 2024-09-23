@@ -19,7 +19,10 @@
 }
 
 #workshop-title .line{
-	background-color: rgba(0, 208, 251, 1.0);
+	--flyers-color:rgba(0, 208, 251, 1.0);
+	--branding-color:rgba(255, 157, 0, 1.0);
+	--renders-color:rgba(255,255,255, 1.0);
+	background-color: var(--flyers-color);
 	block-size: 1px;
 	inline-size: clamp(100px, 15vh, 150px);
 }
