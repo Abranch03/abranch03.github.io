@@ -9,35 +9,8 @@
 	block-size: 90vh;
 }
 
-#left-down-author-name{
-	position: absolute;
-	inset-block-end: 50px;
-	inset-inline-start: 50px;
-
-	font-size: 0.9em;
-
-	text-align: center;
-	text-transform: uppercase;
-}
-
-#left-down-author-name span{
-	font-family: Arial, sans-serif;
-	padding: 5px 10px;
-}
-
-#left-down-author-name span:first-child{
-	border-inline-end: 2px solid white;
-}
-
 #right-down-logo{
 	position: absolute;
 	inset-block-end: 50px;
 	inset-inline-end: 50px;
-}
-
-.placeholder{
-	--square-size: 60px;
-	block-size: var(--square-size);
-	inline-size: var(--square-size);
-	background: white;
 }

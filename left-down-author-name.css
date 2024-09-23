@@ -1,0 +1,18 @@
+#left-down-author-name{
+	position: absolute;
+	inset-block-end: 50px;
+	inset-inline-start: 50px; 
+
+	font-size: 0.9em;
+
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#left-down-author-name span{
+	padding: 5px 10px;
+}
+
+#left-down-author-name span:first-child{
+	border-inline-end: 2px solid white;
+}

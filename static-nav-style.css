@@ -1,0 +1,27 @@
+nav{
+	inline-size: 100vw;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#nav-options{
+	inline-size: 50%;
+	position: static;
+	justify-content: start;
+}
+
+#nav-options .logo{
+	order: -1;
+}
+
+#nav-droplist{
+	display: block;
+	margin-inline-end: 10px;
+	margin-block-end: 10px;
+}
+
+#nav-droplist:hover{
+	cursor: pointer;
+}

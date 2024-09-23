@@ -1,0 +1,72 @@
+.title{
+	text-transform: uppercase;
+	text-align: center;
+
+	font-family: 'humane', 'arial', sans-serif;
+	font-weight: bold;
+	font-size: 15vh;
+}
+
+#workshop-title{
+	margin-block-start: 30px;
+	inline-size: 100%;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	column-gap: 10px;
+}
+
+#workshop-title .line{
+	background-color: rgba(0, 208, 251, 1.0);
+	block-size: 1px;
+	inline-size: clamp(100px, 15vh, 150px);
+}
+
+.selector-button{
+	--square-size: 50px;
+	inline-size: var(--square-size);
+	block-size: var(--square-size);
+	clip-path: circle(40% at center);
+	background-color: white;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: clip-path 100ms;
+}
+
+.selector-button:hover{
+	cursor: pointer;
+	clip-path: circle(50% at center);
+	transition: clip-path 100ms;
+}
+
+#workshop-selector{
+	inline-size: 100%;
+	margin-block-start: 20px;
+
+	position: relative;
+
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	column-gap: 10px;
+}
+
+#current-selection img{
+	block-size: 50vh;
+}
+
+#current-selection img:nth-child(n+2){
+	display: none;
+}
+
+#current-selection-name{
+	position: absolute;
+	inset-block-end: -25px;
+	inset-inline-end: clamp(0px, 5vw, 100px);
+}

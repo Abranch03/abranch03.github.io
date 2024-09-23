@@ -35,3 +35,14 @@
 
 	transition: border-style ease-in 500ms;
 }
+
+#nav-droplist{
+	display: none;
+}
+
+.placeholder{
+	--square-size: 60px;
+	block-size: var(--square-size);
+	inline-size: var(--square-size);
+	background: white;
+}
