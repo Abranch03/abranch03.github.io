@@ -1,18 +1,12 @@
 @font-face{
 	font-family: 'Clash Display';
-	src: local('Clash Display') url('custom-fonts/clash-display/ClashDisplayExtralight.otf') format('opentype');
-	font-weight: normal;
-}
-
-@font-face{
-	font-family: 'Clash Display';
-	src: local('Clash Display') url('custom-fonts/clash-display/ClashDisplayLight.otf') format('opentype');
+	src: url('custom-fonts/clash-display/ClashDisplayLight.otf') format('opentype');
 	font-weight: 100;
 }
 
-@font-face{
-	font-family: 'Humane';
-	src: local('Humane') url('custom-fonts/humane/HumaneBold.otf') format('opentype'),
-		 local('Humane') url('custom-fonts/humane/HumaneBold.woff2') format('woff2');
-	font-weight: bold;
+@font-face {
+    font-family: 'MangoGrotesque';
+    src: url('custom-fonts/humane/HumaneBold.woff2') format('woff2'),
+         url('custom-fonts/humane/HumaneBold.otf') format('opentype');
+    font-weight: bold;
 }
