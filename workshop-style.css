@@ -2,7 +2,7 @@
 	text-transform: uppercase;
 	text-align: center;
 
-	font-family: 'MangoGrotesque', 'arial', sans-serif;
+	font-family: 'Humane', 'arial', sans-serif;
 	font-weight: bold;
 	font-size: 15vh;
 }
@@ -60,12 +60,29 @@
 	column-gap: 10px;
 }
 
+.side-selection img{
+	block-size: 30vh;
+}
+
+#current-selection a{
+	display: block;
+}
+
 #current-selection img{
 	block-size: 50vh;
+
+	transition: transform ease-out 200ms, filter ease-out 100ms;
 }
 
 #current-selection img:nth-child(n+2){
 	display: none;
+}
+
+#current-selection img:hover{
+	transform: translateY(-5%);
+	filter: drop-shadow(0 10px 10px #ffffff);
+
+	transition: transform ease-in 200ms, filter ease-in 100ms;
 }
 
 #current-selection-name{
