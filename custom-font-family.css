@@ -11,7 +11,7 @@
 }
 
 @font-face{
-	font-family: 'humane';
-	src: local('humane') url('custom-fonts/humane/humaneBold.otf') format('opentype');
+	font-family: 'Humane';
+	src: local('Humane') url('custom-fonts/humane/HumaneBold.otf') format('opentype');
 	font-weight: bold;
 }
