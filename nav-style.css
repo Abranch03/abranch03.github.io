@@ -36,6 +36,10 @@
 	transition: border-style ease-in 500ms;
 }
 
+#nav-options .logo a{
+	display: block;
+}
+
 #nav-droplist{
 	display: none;
 }
