@@ -7,6 +7,15 @@
 	font-size: 15vh;
 }
 
+#workshop-smudge-bg{
+	inline-size: 100%;
+	block-size: 100vh;
+
+	background: no-repeat top center url('bg/flyers_smudge_workshop_bg.png');
+	background-attachment: fixed;
+	background-size: cover;
+}
+
 #workshop-title{
 	margin-block-start: 30px;
 	inline-size: 100%;
