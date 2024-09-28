@@ -45,7 +45,7 @@
 }
 
 .placeholder{
-	--square-size: 60px;
+	--square-size: 30px;
 	block-size: var(--square-size);
 	inline-size: var(--square-size);
 	background: white;

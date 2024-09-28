@@ -19,8 +19,8 @@ function changeCurrentSelection(collection, newSelection=0){
 }
 
 function changeCurrentSelectionBg(newBg){
-	workshopSmudgeBg=document.querySelector('#workshop-smudge-bg');
-	workshopSmudgeBg.style.backgroundImage = `url('bg/${newBg}_smudge_workshop_bg.png')`;
+	body=document.querySelector('body');
+	body.style.setProperty('--smudge-bg', `url("../../bg/${newBg}_smudge_workshop_bg.png")`);
 }
 
 function changeWorkshopTitleLineColor(newColor){

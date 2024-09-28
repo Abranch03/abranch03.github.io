@@ -1,0 +1,48 @@
+nav{
+	--nav-bg: rgb(0 0 0 / 0.3);
+
+	inline-size: 100vw;
+	block-size: 10vh;
+	max-block-size: 80px;
+	min-block-size: 60px;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+
+	position: sticky;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+
+	background-color: var(--nav-bg);
+	transition: background ease-out 200ms;
+
+	z-index: 3;
+}
+
+nav:hover{
+	background-color: rgb(from var(--nav-bg) r g b / 1.0);
+}
+
+#nav-options{
+	inline-size: 50%;
+	position: static;
+	justify-content: start;
+	min-block-size: 0px;
+	block-size: auto;
+}
+
+#nav-options .logo{
+	order: -1;
+}
+
+#nav-droplist{
+	display: block;
+	margin-inline-end: 30px;
+	margin-block-end: 10px;
+}
+
+#nav-droplist:hover{
+	cursor: pointer;
+}

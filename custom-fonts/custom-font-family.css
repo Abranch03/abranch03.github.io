@@ -1,0 +1,12 @@
+@font-face{
+	font-family: 'Clash Display';
+	src: url('clash-display/ClashDisplayLight.otf') format('opentype');
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Humane';
+    src: url('humane/HumaneBold.woff2') format('woff2'),
+         url('humane/HumaneBold.otf') format('opentype');
+    font-weight: bold;
+}

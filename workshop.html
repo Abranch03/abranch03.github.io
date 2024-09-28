@@ -6,37 +6,17 @@
 
 	<title>Julio L&oacute;pez | Portafolio</title>
 
-	<link rel="stylesheet" type="text/css" href="custom-font-family.css">
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="nav-style.css">
-	<link rel="stylesheet" type="text/css" href="static-nav-style.css">
-	<link rel="stylesheet" type="text/css" href="workshop-style.css">
-	<link rel="stylesheet" type="text/css" href="left-down-author-name.css">
+	<link rel="stylesheet" type="text/css" href="custom-fonts/custom-font-family.css">
+	<link rel="stylesheet" type="text/css" href="styles/reset.css">
+	<link rel="stylesheet" type="text/css" href="styles/nav-styles/nav-style.css">
+	<link rel="stylesheet" type="text/css" href="styles/index-styles/index-style.css">
+	<link rel="stylesheet" type="text/css" href="styles/nav-styles/static-nav-style.css">
+	<link rel="stylesheet" type="text/css" href="styles/workshop-styles/workshop-style.css">
+	<link rel="stylesheet" type="text/css" href="styles/left-down-author-name.css">
 
-	<style type="text/css">
-		body{
-			font-family: 'Clash Display', Arial, sans-serif;
-			font-size: 16px;
-			font-weight: 100;
-			color: white;
-
-			background: no-repeat top center url('bg/workshop_bg.png');
-			background-attachment: fixed;
-			background-size: cover;
-
-			/*overflow: hidden;*/
-		}
-
-		#nav-options .nav-option a[name="workshop"]{
-			border-style: solid;
-		}
-
-	</style>
 </head>
 
 <body>
-
-<div id="workshop-smudge-bg">
 
 <nav>
 	<ul id="nav-options">
@@ -50,7 +30,7 @@
 	<svg id='nav-droplist' width="30px" height="30px" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7C3 6.44771 3.44772 6 4 6H24C24.5523 6 25 6.44771 25 7C25 7.55229 24.5523 8 24 8H4C3.44772 8 3 7.55229 3 7Z" fill="#ffffff"/><path d="M3 14C3 13.4477 3.44772 13 4 13H24C24.5523 13 25 13.4477 25 14C25 14.5523 24.5523 15 24 15H4C3.44772 15 3 14.5523 3 14Z" fill="#ffffff"/><path d="M4 20C3.44772 20 3 20.4477 3 21C3 21.5523 3.44772 22 4 22H24C24.5523 22 25 21.5523 25 21C25 20.4477 24.5523 20 24 20H4Z" fill="#ffffff"/></svg>
 </nav>
 
-<header id='workshop-title' class="title">
+<header id='workshop-title' class="header-title title">
 	<span class="line"></span>
 	<h1>workshop</h1>
 	<span class="line"></span>	
@@ -66,19 +46,23 @@
 	</button>
 
 	<figure id="left-side-selection" class="side-selection">
-		<img name="side-selection" src="workshop/side-selection.png">
+		<img name="side-selection" src="assets/workshop-assets/side-selection.png">
 	</figure>
 	
 	<figure id="current-selection">
+		<a href="workshop-flyers.html">
+		<img name="flyers" alt="flyers" src="assets/workshop-assets/flyers-selection.png">
+		</a>
 		<a href="#">
-		<img name="flyers" alt="flyers" src="workshop/flyers-selection.png">
-		<img name="branding" alt="branding" src="workshop/branding-selection.png">
-		<img name="renders" alt="renders" src="workshop/renders-selection.png">
+		<img name="branding" alt="branding" src="assets/workshop-assets/branding-selection.png">
+		</a>
+		<a href="#">
+		<img name="renders" alt="renders" src="assets/workshop-assets/renders-selection.png">
 		</a>
 	</figure>
 
 	<figure id="right-side-selection" class="side-selection">
-		<img name="side-selection" src="workshop/side-selection.png">
+		<img name="side-selection" src="assets/workshop-assets/side-selection.png">
 	</figure>
 	
 	<button id="next-button" class="selector-button" type="button">
@@ -91,11 +75,9 @@
 
 	<h2 id="current-selection-name" class="title">flyers</h2>
 
-</div><script type="text/javascript" src="workshop-selector.js"></script>
+</div><script type="text/javascript" src="scripts/workshop-scripts/workshop-selector.js"></script>
 
 <div id="left-down-author-name"><span>portafolio</span><span>julio l&oacute;pez</span></div>
-
-</div>
 
 </body>
 

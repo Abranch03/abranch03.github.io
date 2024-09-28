@@ -1,0 +1,8 @@
+body{
+	--smudge-bg: url('../../bg/flyers_smudge_workshop_bg.png');
+}
+
+#workshop-flyers-title .line{
+	--flyers-color:rgba(0, 208, 251, 1.0);
+	background-color: var(--flyers-color);
+}

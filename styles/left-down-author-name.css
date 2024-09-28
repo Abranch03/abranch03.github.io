@@ -1,5 +1,5 @@
 #left-down-author-name{
-	position: absolute;
+	position: fixed;
 	inset-block-end: 50px;
 	inset-inline-start: 50px; 
 

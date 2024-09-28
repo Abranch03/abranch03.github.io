@@ -1,3 +1,26 @@
+body{
+	--smudge-bg: url('../../bg/flyers_smudge_workshop_bg.png');
+	font-family: 'Clash Display', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 100;
+	color: white;
+
+	background: no-repeat top center;
+	background-image: var(--smudge-bg), url('../../bg/workshop_bg.png');
+	background-attachment: fixed;
+	background-size: cover;
+
+	/*overflow: hidden;*/
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	transition: background ease-in 200ms;
+}
+
+#nav-options .nav-option a[name="workshop"]{
+	border-style: solid;
+}
+
 .title{
 	text-transform: uppercase;
 	text-align: center;
@@ -7,13 +30,66 @@
 	font-size: 15vh;
 }
 
-#workshop-smudge-bg{
+.header-title{
 	inline-size: 100%;
-	block-size: 100vh;
 
-	background: no-repeat top center url('bg/flyers_smudge_workshop_bg.png');
-	background-attachment: fixed;
-	background-size: cover;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	column-gap: 10px;
+}
+
+.description{
+	text-align: center;
+	margin-block: 20px;
+}
+
+.images-collection{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	margin-block: 20px;
+}
+
+.image-element{
+	position: relative;
+}
+
+.image-element img{
+	max-block-size: 80vh;
+	max-inline-size: 100vw;
+	margin-block: 20px;
+}
+
+.image-description-container{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	row-gap: 10px;
+
+	inline-size: 35%;
+	block-size: 100%;
+
+	position: absolute;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+}
+
+.image-description{
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 10px;
+
+	inline-size: 20vw;
+	max-inline-size: 250px;
+	block-size: 15vh;
+	max-block-size: 200px;
+
+	overflow: auto;
 }
 
 #workshop-title{
@@ -32,6 +108,9 @@
 	--branding-color:rgba(255, 157, 0, 1.0);
 	--renders-color:rgba(255,255,255, 1.0);
 	background-color: var(--flyers-color);
+}
+
+.header-title .line{
 	block-size: 1px;
 	inline-size: clamp(100px, 15vh, 150px);
 }
