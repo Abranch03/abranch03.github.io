@@ -1,0 +1,46 @@
+.images-collection{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	margin-block: 20px;
+}
+
+.image-element{
+	position: relative;
+}
+
+.image-element img{
+	max-block-size: 80vh;
+	max-inline-size: 100vw;
+	margin-block: 20px;
+}
+
+.image-description-container{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	row-gap: 10px;
+
+	inline-size: 35%;
+	block-size: 100%;
+
+	position: absolute;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+}
+
+.image-description{
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 10px;
+
+	inline-size: 20vw;
+	max-inline-size: 250px;
+	block-size: 15vh;
+	max-block-size: 200px;
+
+	overflow: auto;
+}

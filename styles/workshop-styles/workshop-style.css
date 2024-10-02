@@ -45,56 +45,8 @@ body{
 	margin-block: 20px;
 }
 
-.images-collection{
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-
-	margin-block: 20px;
-}
-
-.image-element{
-	position: relative;
-}
-
-.image-element img{
-	max-block-size: 80vh;
-	max-inline-size: 100vw;
-	margin-block: 20px;
-}
-
-.image-description-container{
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
-	row-gap: 10px;
-
-	inline-size: 35%;
-	block-size: 100%;
-
-	position: absolute;
-	inset-block-end: 0;
-	inset-inline-start: 0;
-}
-
-.image-description{
-	background-color: rgba(0, 0, 0, 0.6);
-	border: 1px solid white;
-	border-radius: 5px;
-	padding: 10px;
-
-	inline-size: 20vw;
-	max-inline-size: 250px;
-	block-size: 15vh;
-	max-block-size: 200px;
-
-	overflow: auto;
-}
-
 #workshop-title{
-	margin-block-start: 30px;
-	inline-size: 100%;
+	/*inline-size: 100%;*/
 
 	display: flex;
 	flex-flow: row nowrap;
@@ -108,6 +60,10 @@ body{
 	--branding-color:rgba(255, 157, 0, 1.0);
 	--renders-color:rgba(255,255,255, 1.0);
 	background-color: var(--flyers-color);
+}
+
+.header-title{
+	margin-block-start: 30px;
 }
 
 .header-title .line{
@@ -148,9 +104,51 @@ body{
 	column-gap: 10px;
 }
 
-.side-selection img{
-	block-size: 25vh;
+/*###################################################*/
+
+#current-selection{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	column-gap: 10px;
 }
+
+#current-selection .side-selection img{
+	block-size: 25vh;
+	opacity: 0.5;
+}
+
+#current-selection .side-selection img:hover{
+	filter: none;
+	transform: none;
+	cursor: default;
+}
+
+#current-selection .main-selection img{
+	block-size: 50vh;
+	opacity: 1;
+}
+
+#current-selection .main-selection img:hover{
+	filter: drop-shadow(0 10px 10px #ffffff);
+	transform: translateY(-5%);
+	cursor: pointer;
+}
+
+#current-selection .side-selection:first-child{
+	order: 0;
+}
+
+#current-selection .side-selection:nth-child(2){
+	order: 1;
+}
+
+#current-selection .side-selection:nth-child(3){
+	order: -1;
+}
+
+/*###################################################*/
 
 #current-selection a{
 	display: block;
@@ -162,9 +160,9 @@ body{
 	transition: transform ease-out 200ms, filter ease-out 100ms;
 }
 
-#current-selection img:nth-child(n+2){
+/*#current-selection a:nth-child(n+2) img{
 	display: none;
-}
+}*/
 
 #current-selection img:hover{
 	transform: translateY(-5%);

@@ -1,10 +1,10 @@
 function findCurrentSelection(collection){
 	for (let i=0; i<collection.length; i++){
-		if (getComputedStyle(collection[i]).display != 'none'){
-			console.log('current image: ' + collection[i].name);
+		if (collection[i].classList.contains('main-selection')){
 			return i;
 		}
 	}
+	return 0;
 }
 
 function changeCurrentSelectionName(newLabel){
@@ -12,10 +12,14 @@ function changeCurrentSelectionName(newLabel){
 	currentSelectionName.textContent = newLabel;
 }
 
-function changeCurrentSelection(collection, newSelection=0){
+function changeCurrentSelection(collection, newSelection=0, classAnimation=''){
 	let currentSelection = findCurrentSelection(collection);
-	collection[currentSelection].style.setProperty('display', 'none');
-	collection[newSelection].style.setProperty('display', 'block');
+
+	collection[currentSelection].classList.remove('main-selection');
+	collection[newSelection].classList.add('main-selection');
+	
+	activateAnimation(collection[newSelection], classAnimation);
+	collection[currentSelection].classList.remove('left-slide', 'right-slide');
 }
 
 function changeCurrentSelectionBg(newBg){
@@ -31,9 +35,17 @@ function changeWorkshopTitleLineColor(newColor){
 	}
 }
 
+function increaseSelectionOrder(selection, increment){
+	let selectionOrder = Number.parseInt(getComputedStyle(selection).order);
+	let newSelectionOrder = Number.parseInt(selectionOrder + increment);
+	selection.style.setProperty('order', newSelectionOrder.toString());
+}
+
 function selectPrevious(collection){
 	let currentSelection = findCurrentSelection(collection);
+	let oldOrder;
 	let previousSelection;
+	let nextSelection;
 
 	if (currentSelection-1<0){
 		previousSelection = collection.length-1;
@@ -42,14 +54,26 @@ function selectPrevious(collection){
 		previousSelection = currentSelection-1;
 	}
 
+	if (currentSelection+1>=collection.length){
+		nextSelection = 0;
+	}
+	else{
+		nextSelection = currentSelection+1;
+	}
+
 	changeCurrentSelectionBg(collection[previousSelection].name);
 	changeCurrentSelectionName(collection[previousSelection].name);
 	changeWorkshopTitleLineColor(collection[previousSelection].name);
-	changeCurrentSelection(collection, previousSelection);
+	changeCurrentSelection(collection, previousSelection, 'right-slide');
+
+	increaseSelectionOrder(collection[previousSelection], 1);
+	increaseSelectionOrder(collection[currentSelection], 1);
+	increaseSelectionOrder(collection[nextSelection], -2);
 }
 
 function selectNext(collection){
 	let currentSelection = findCurrentSelection(collection);
+	let previousSelection;
 	let nextSelection;
 
 	if (currentSelection+1>=collection.length){
@@ -59,23 +83,27 @@ function selectNext(collection){
 		nextSelection = currentSelection+1;
 	}
 
+	if (currentSelection-1<0){
+		previousSelection = collection.length-1;
+	}
+	else{
+		previousSelection = currentSelection-1;
+	}
+
 	changeCurrentSelectionBg(collection[nextSelection].name);
 	changeCurrentSelectionName(collection[nextSelection].name);
 	changeWorkshopTitleLineColor(collection[nextSelection].name);
-	changeCurrentSelection(collection, nextSelection);
+	changeCurrentSelection(collection, nextSelection, 'left-slide');
+	
+	increaseSelectionOrder(collection[previousSelection], 2);
+	increaseSelectionOrder(collection[currentSelection], -1);
+	increaseSelectionOrder(collection[nextSelection], -1);
 }
 
-const imgSelections=document.querySelectorAll('#current-selection img');
-console.log(imgSelections);
+const aImgSelections=document.querySelectorAll('#current-selection .side-selection');
+console.log(aImgSelections);
 const nextButton = document.querySelector('#next-button');
 const previousButton = document.querySelector('#previous-button')
 
-nextButton.addEventListener('click', ()=>{selectNext(imgSelections)});
-previousButton.addEventListener('click', ()=>{selectPrevious(imgSelections)});
-
-/*Pre-loading backgrounds*/
-for (let i=1; i<=imgSelections.length;i++){
-	console.log('bg' + i + 'loaded');
-	selectNext(imgSelections);
-}
-
+nextButton.addEventListener('click', ()=>{selectNext(aImgSelections)});
+previousButton.addEventListener('click', ()=>{selectPrevious(aImgSelections)});

@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/index-styles/index-style.css">
 	<link rel="stylesheet" type="text/css" href="styles/nav-styles/static-nav-style.css">
 	<link rel="stylesheet" type="text/css" href="styles/workshop-styles/workshop-style.css">
+	<link rel="stylesheet" type="text/css" href="styles/workshop-styles/workshop-selector-animations.css">
 	<link rel="stylesheet" type="text/css" href="styles/left-down-author-name.css">
 
 </head>
@@ -44,25 +45,17 @@
 		</g>
 		</svg>
 	</button>
-
-	<figure id="left-side-selection" class="side-selection">
-		<img name="side-selection" src="assets/workshop-assets/side-selection.png">
-	</figure>
 	
 	<figure id="current-selection">
-		<a href="workshop-flyers.html">
+		<a name="flyers" href="workshop-flyers.html" class="side-selection main-selection">
 		<img name="flyers" alt="flyers" src="assets/workshop-assets/flyers-selection.png">
 		</a>
-		<a href="#">
+		<a name="branding" href="#" class="side-selection">
 		<img name="branding" alt="branding" src="assets/workshop-assets/branding-selection.png">
 		</a>
-		<a href="#">
+		<a name="renders" href="#" class="side-selection">
 		<img name="renders" alt="renders" src="assets/workshop-assets/renders-selection.png">
 		</a>
-	</figure>
-
-	<figure id="right-side-selection" class="side-selection">
-		<img name="side-selection" src="assets/workshop-assets/side-selection.png">
 	</figure>
 	
 	<button id="next-button" class="selector-button" type="button">
@@ -75,7 +68,7 @@
 
 	<h2 id="current-selection-name" class="title">flyers</h2>
 
-</div><script type="text/javascript" src="scripts/workshop-scripts/workshop-selector.js"></script>
+</div><script type="text/javascript" src="scripts/workshop-scripts/workshop-selector.js"></script><script type="text/javascript" src="scripts/workshop-scripts/workshop-selector-animations.js"></script>
 
 <div id="left-down-author-name"><span>portafolio</span><span>julio l&oacute;pez</span></div>
 
