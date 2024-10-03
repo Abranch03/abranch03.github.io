@@ -1,78 +1,102 @@
 @keyframes side-selection-left-slide{
 	0%{
-		transform: translateX(20%);
+		transform: translateX(80%) scale(0.5);
+		z-index: 2;
 	}
 
-	50%{
-		transform: translateX(-5%);
+	/*10%{
+		transform: translateX(80%) scale(0.6);
+		z-index: 1;
+	}*/
+
+	60%{
+		transform: translateX(-8%);
+		z-index: 2;
 	}
+
 
 	100%{
+		z-index: 2;
 	}
 }
 
 @keyframes side-selection-right-slide{
 	0%{
-		transform: translateX(-20%);
+		transform: translateX(-80%) scale(0.5);
+		z-index: 2;
 	}
 
-	50%{
-		transform: translateX(5%);
+	/*10%{
+		transform: translateX(-80%) scale(0.5);
+		z-index: 1;
+	}*/
+
+	60%{
+		transform: translateX(8%);
+		z-index: 2;
 	}
 
 	100%{
+		z-index: 2;
 	}
 }
 
 @keyframes side-selection-left-backslide{
+	0%{
+		transform: translateX(150%) scale(2.0);
+		z-index: 1;
+	}
 
+	60%{z-index: 1;}
+
+	100%{z-index: 1;}
 }
 
 @keyframes side-selection-right-backslide{
-	0%{}
-
-	40%{
-		transform: translateX(-150%);
-	}
-
-	41%{
-		transform: translateX(420%);
-	}
-
-	60%{
-		transform: translateX(320%);
-	}
-
-	100%{
-		transform: translateX(320%);
-	}
-	
-}
-
-@keyframes current-selection-left-slide{
-	0%{}
-
-	20%{
-		transform: scale(0.5);
-	}
-
-	60%{
-		transform: translateX(-78%) scale(0.5);
-	}
-
-	100%{
-		transform: translateX(-78%) scale(0.5);
-	}
-}
-
-@keyframes current-selection-right-slide{
 	0%{
-
+		transform: translateX(-150%) scale(2.0);
+		z-index: 1;
 	}
 
-	100%{
-		transform: translateX(78%) scale(0.5);
+	60%{z-index: 1;}
+
+	100%{z-index: 1;}
+}
+
+@keyframes side-selection-backleft-slide{
+	0%{
+		transform: translateX(400%);
+		z-index: 0;
 	}
+
+	30%{
+		transform: translateX(180%) scale(0.4);
+		z-index: 0;
+	}
+
+	80%{
+		z-index: 0;
+	}
+
+	100%{z-index: 0;}
+}
+
+@keyframes side-selection-backright-slide{
+	0%{
+		transform: translateX(-400%);
+		z-index: 0;
+	}
+
+	30%{
+		transform: translateX(-180%) scale(0.4);
+		z-index: 0;
+	}
+
+	80%{
+		z-index: 0;
+	}
+
+	100%{z-index: 0;}
 }
 
 :root{
@@ -80,9 +104,25 @@
 }
 
 .left-slide{
-	animation: side-selection-left-slide var(--animation-time) ease-out;
+	animation: side-selection-left-slide var(--animation-time) ease;
 }
 
 .right-slide{
-	animation: side-selection-right-slide var(--animation-time) ease-out;
+	animation: side-selection-right-slide var(--animation-time) ease;
+}
+
+.left-backslide{
+	animation: side-selection-left-backslide var(--animation-time) ease;
+}
+
+.right-backslide{
+	animation: side-selection-right-backslide var(--animation-time) ease;
+}
+
+.backleft-slide{
+	animation: side-selection-backleft-slide var(--animation-time) ease;
+}
+
+.backright-slide{
+	animation: side-selection-backright-slide var(--animation-time) ease;
 }

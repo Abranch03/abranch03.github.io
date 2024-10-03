@@ -6,7 +6,14 @@ function activateAnimation(element, classAnimation){
 	console.log(element.name + ' Clases: ' + element.classList)
 }
 
-function deleteAnimation(element, classAnimation){
-	element.classList.remove(classAnimation);
+function resetAnimations(element){
+	let animations = ['left-slide',
+					 'right-slide',
+					 'left-backslide',
+					 'right-backslide',
+					 'backright-slide',
+					 'backleft-slide',
+					 ];
 
+	element.classList.remove(...animations);
 }

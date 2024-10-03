@@ -19,7 +19,7 @@ function changeCurrentSelection(collection, newSelection=0, classAnimation=''){
 	collection[newSelection].classList.add('main-selection');
 	
 	activateAnimation(collection[newSelection], classAnimation);
-	collection[currentSelection].classList.remove('left-slide', 'right-slide');
+	resetAnimations(collection[currentSelection]);
 }
 
 function changeCurrentSelectionBg(newBg){
@@ -43,7 +43,6 @@ function increaseSelectionOrder(selection, increment){
 
 function selectPrevious(collection){
 	let currentSelection = findCurrentSelection(collection);
-	let oldOrder;
 	let previousSelection;
 	let nextSelection;
 
@@ -64,7 +63,12 @@ function selectPrevious(collection){
 	changeCurrentSelectionBg(collection[previousSelection].name);
 	changeCurrentSelectionName(collection[previousSelection].name);
 	changeWorkshopTitleLineColor(collection[previousSelection].name);
+
+	resetAnimations(collection[previousSelection]);
 	changeCurrentSelection(collection, previousSelection, 'right-slide');
+	activateAnimation(collection[currentSelection], 'right-backslide');
+	resetAnimations(collection[nextSelection]);
+	activateAnimation(collection[nextSelection], 'backleft-slide');
 
 	increaseSelectionOrder(collection[previousSelection], 1);
 	increaseSelectionOrder(collection[currentSelection], 1);
@@ -93,7 +97,13 @@ function selectNext(collection){
 	changeCurrentSelectionBg(collection[nextSelection].name);
 	changeCurrentSelectionName(collection[nextSelection].name);
 	changeWorkshopTitleLineColor(collection[nextSelection].name);
+
+	resetAnimations(collection[nextSelection]);
 	changeCurrentSelection(collection, nextSelection, 'left-slide');
+	activateAnimation(collection[currentSelection], 'left-backslide');
+	resetAnimations(collection[previousSelection]);
+	activateAnimation(collection[previousSelection], 'backright-slide');
+
 	
 	increaseSelectionOrder(collection[previousSelection], 2);
 	increaseSelectionOrder(collection[currentSelection], -1);

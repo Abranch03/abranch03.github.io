@@ -104,7 +104,6 @@ body{
 	column-gap: 10px;
 }
 
-/*###################################################*/
 
 #current-selection{
 	display: flex;
@@ -117,17 +116,18 @@ body{
 #current-selection .side-selection img{
 	block-size: 25vh;
 	opacity: 0.5;
-}
-
-#current-selection .side-selection img:hover{
-	filter: none;
-	transform: none;
-	cursor: default;
+	transition: opacity 500ms ease;
 }
 
 #current-selection .main-selection img{
 	block-size: 50vh;
 	opacity: 1;
+
+	transition: transform 200ms ease-out, filter 200ms ease-out;
+}
+
+#current-selection .side-selection:hover{
+	cursor: default;
 }
 
 #current-selection .main-selection img:hover{
@@ -148,27 +148,9 @@ body{
 	order: -1;
 }
 
-/*###################################################*/
 
 #current-selection a{
 	display: block;
-}
-
-#current-selection img{
-	block-size: 50vh;
-
-	transition: transform ease-out 200ms, filter ease-out 100ms;
-}
-
-/*#current-selection a:nth-child(n+2) img{
-	display: none;
-}*/
-
-#current-selection img:hover{
-	transform: translateY(-5%);
-	filter: drop-shadow(0 10px 10px #ffffff);
-
-	transition: transform ease-in 200ms, filter ease-in 100ms;
 }
 
 #current-selection-name{
