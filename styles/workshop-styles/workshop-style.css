@@ -113,6 +113,14 @@ body{
 	column-gap: 10px;
 }
 
+#current-selection .side-selection{
+	pointer-events: none;
+}
+
+#current-selection .main-selection{
+	pointer-events: all;
+}
+
 #current-selection .side-selection img{
 	block-size: 25vh;
 	opacity: 0.5;
