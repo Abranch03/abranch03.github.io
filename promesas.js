@@ -1,5 +1,5 @@
 console.log('Testeando promesas con fetch');
-fetch(`/texto.txt`)
+fetch(`texto.txt`)
     .then((response)=>{
         console.log(response);
     })
